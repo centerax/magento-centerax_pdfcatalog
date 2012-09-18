@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Centerax_Pdfcatalog>
+			<version>0.0.6</version>
+		</Centerax_Pdfcatalog>
+	</modules>
+	<default>
+		<catalog>
+			<ecatalog>
+				<title>Magento E-Catalog</title>
+				<subject>Product offer</subject>
+				<keywords>shop, product, sell</keywords>
+				<author>Seller</author>
+			</ecatalog>
+		</catalog>
+	</default>
+	<global>
+		<models>
+			<pdfcatalog>
+				<class>Centerax_Pdfcatalog_Model</class>
+				<resourceModel>pdfcatalog_entity</resourceModel>
+			</pdfcatalog>
+			<pdfcatalog_entity>
+				<class>Centerax_Pdfcatalog_Model_Entity</class>
+				<entities>
+					<pdfcatalog_entity>
+						<table>pdfcatalog_entity</table>
+					</pdfcatalog_entity>
+					<entity>
+						<table>pdfcatalog_entity</table>
+					</entity>
+				</entities>
+			</pdfcatalog_entity>
+		</models>
+		<blocks>
+			<pdfcatalog>
+				<class>Centerax_Pdfcatalog_Block</class>
+			</pdfcatalog>
+		</blocks>
+		<helpers>
+			<pdfcatalog>
+				<class>Centerax_Pdfcatalog_Helper</class>
+			</pdfcatalog>
+		</helpers>
+		<resources>
+			<pdfcatalog_setup>
+				<setup>
+					<module>Centerax_Pdfcatalog</module>
+					<class>Centerax_Pdfcatalog_Model_Entity_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</pdfcatalog_setup>
+			<pdfcatalog_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</pdfcatalog_write>
+			<pdfcatalog_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</pdfcatalog_read>
+		</resources>
+
+	</global>
+
+	<admin>
+		<routers>
+			<pdfcatalog>
+				<use>admin</use>
+				<args>
+					<module>Centerax_Pdfcatalog</module>
+					<frontName>pdfcat</frontName>
+				</args>
+			</pdfcatalog>
+		</routers>
+	</admin>
+
+	<adminhtml>
+		<menu>
+			<catalog>
+				<children>
+					<pdfcatalog translate="title" module="pdfcatalog">
+						<title>E-Catalog</title>
+						<children>
+							<pdfcatalog_new translate="title"
+								module="pdfcatalog">
+								<title>New Catalog</title>
+								<action>pdfcat/index/create</action>
+							</pdfcatalog_new>
+							<pdfcatalog_list translate="title"
+								module="pdfcatalog">
+								<title>List Catalogs</title>
+								<action>pdfcat/index/list</action>
+							</pdfcatalog_list>
+						</children>
+					</pdfcatalog>
+				</children>
+			</catalog>
+		</menu>
+		<layout>
+			<updates>
+				<pdfcatalog>
+					<file>pdfcatalog.xml</file>
+				</pdfcatalog>
+			</updates>
+		</layout>
+	</adminhtml>
+</config>

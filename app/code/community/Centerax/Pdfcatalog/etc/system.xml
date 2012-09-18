@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+        <catalog>
+            <groups>
+                <ecatalog translate="label comment" module="pdfcatalog">
+                    <label>E-Catalog</label>
+					<comment><![CDATA[<div class="box">Support this extension by clicking on this button <a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=GD7N3F58XDX56&lc=UY&item_name=Support+Centerax+Development&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted"><img src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" valign="bottom" alt="PayPal - The safer, easier way to pay online!" /></a></div>]]>
+					</comment>
+                    <sort_order>670</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <subject translate="label">
+                            <label>Subject</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </subject>
+                        <keywords translate="label">
+                            <label>Keywords</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </keywords>
+                        <author translate="label">
+                            <label>Author</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </author>
+                    </fields>
+                </ecatalog>
+            </groups>
+        </catalog>
+    </sections>
+</config>

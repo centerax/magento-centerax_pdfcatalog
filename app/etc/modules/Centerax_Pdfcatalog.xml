@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Centerax_Pdfcatalog>
+            <active>true</active>
+            <codePool>community</codePool>
+            <version>0.0.1</version>
+        </Centerax_Pdfcatalog>
+    </modules>
+</config>
