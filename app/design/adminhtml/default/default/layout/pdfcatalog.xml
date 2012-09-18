@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.0.1">
+
+    <pdfcatalog_index_index>
+		<reference name="head">
+                <action method="addJs"><script>mage/adminhtml/pdfcatalog.min.js</script></action>
+		</reference>
+		<reference name="content">
+            <block type="pdfcatalog/index" name="pdfcatalog_index" template="pdfcatalog/index.phtml"/>
+        </reference>
+    </pdfcatalog_index_index>
+
+</layout>
