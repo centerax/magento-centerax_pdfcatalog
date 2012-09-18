@@ -1,0 +1,37 @@
+<div class="content-header">
+   <h3 class="icon-head head-newsletter-list"><?php echo $this->getHeaderText() ?></h3>
+   <p class="content-buttons form-buttons">
+                <?php echo $this->getBackButtonHtml(); ?>
+                <?php echo $this->getResetButtonHtml(); ?>
+
+                <?php echo $this->getSaveButtonHtml(); ?>
+    </p>
+</div>
+<form action="<?php echo $this->getSaveUrl() ?>" method="post" id="catalog_pdf_form">
+    <?php echo $this->getBlockHtml('formkey'); ?>
+    <div class="no-display">
+        <input type="hidden" id="change_flag_element" name="_change_type_flag" value="" />
+        <input type="hidden" id="save_as_flag" name="_save_as_flag" value="<?php echo $this->getSaveAsFlag() ?>" />
+    </div>
+    <?php echo $this->getForm() ?>
+    <div id="chosser-container">
+    </div>
+</form>
+<script type="text/javascript">
+ 	var pdfForm = new varienForm('catalog_pdf_form');
+	var rule_conditions_fieldset = new VarienRulesForm('');
+	$('attribs').observe('click', function(event){
+  		if(Event.element(event).value == 'image' && Event.element(event).selected == true){
+			$('image_height').disabled = '';
+			$('image_height').addClassName('required-entry');
+			$('image_width').disabled = '';
+			$('image_width').addClassName('required-entry');
+  		}else{
+  			$('image_height').disabled = 'disabled';
+  			$('image_height').removeClassName('required-entry');
+			$('image_width').disabled = 'disabled';
+			$('image_width').removeClassName('required-entry');
+  		}
+ 	});
+
+</script>
